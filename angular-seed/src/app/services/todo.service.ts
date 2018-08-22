@@ -15,5 +15,8 @@ export class TodoService {
     list(): Todo[] {
         return this.todos;
     }
-
+	
+	create(description: string, priority: Number, completed: boolean) {
+		this.todos = this.todos.concat(new Todo(description,priority,completed));
+	}
 }
